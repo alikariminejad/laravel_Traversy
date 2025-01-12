@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,4 +35,20 @@ Route::get('/posts/{id}', function (string $id) {
 
 Route::get('/posts/{id}/comments/{commentId}', function (string $id, string $commentId) {
     return 'Post ' . $id . ' Comment ' . $commentId;
+});
+
+Route::get('/test', function (Request $request) {
+    return [
+        'method' => $request->method(),
+        'url' => $request->url(),
+        'path' => $request->path(),
+        'fullurl' => $request->fullUrl(),
+        'ip' => $request->ip(),
+        'useragent' => $request->userAgent(),
+        'header' => $request->header(),
+    ];
+});
+
+Route::get('/users', function () {
+    return request()->input('name');
 });
