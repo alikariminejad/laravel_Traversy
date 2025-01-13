@@ -1,0 +1,4 @@
+PHP artisan command:
+
+
+- php artisan make:controller ........JobController or HomeController

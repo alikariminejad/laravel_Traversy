@@ -7,12 +7,13 @@
     <title>Job Listing</title>
 </head>
 <body>
-<h1>Job list</h1>
+<h1>{{ $title }}</h1>
 <ul>
-    <li>Web Developer</li>
-    <li>Database Enginner</li>
-    <li>Software Enginner</li>
-    <li>System Analyst</li>
+    @forelse($jobs as $job)
+        <li>{{ $job }}</li>
+    @empty
+        <p>there is no job available</p>
+    @endforelse
 </ul>
 </body>
 </html>
