@@ -2,3 +2,4 @@ PHP artisan command:
 
 
 - php artisan make:controller ........JobController or HomeController
+- php artisan make:controller .......JobController --resource(this will create a controller with all methods needed)
