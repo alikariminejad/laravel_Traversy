@@ -9,8 +9,19 @@ Route::get('/', function () {
 
 
 Route::get('/jobs', function(){
-    return '<h1>Available Jobs</h1>';
+    $title = 'Available Jobs';
+    $jobs = [
+        'Web Development',
+        'Graphics Design',
+        'Software Development',
+        'System Analyst',
+    ];
+    return view('jobs.index', compact('title', 'jobs'));
 })->name('jobs');
+
+Route::get('/jobs/create', function(){
+    return view('jobs.create');
+})->name('jobs.create');
 
 // Route::match(['get', 'post'],'/submit', function(){
 //     return 'submitted';
@@ -52,3 +63,20 @@ Route::get('/test', function (Request $request) {
 Route::get('/users', function () {
     return request()->input('name');
 });
+
+
+Route::get('/test2', function () {
+//    return response('<h2>Hello World</h2>')->header('Content-Type', 'text/html');
+    return response()->json(["name"=>"ali"])->cookie('name', 'ali');
+});
+
+Route::get('/download', function(){
+    return response()->download(public_path('favicon.ico'));
+});
+
+Route::get('/', function(Request $request){
+    $cookie = $request->cookie('name');
+    return response()->json(['cookie' => $cookie]);
+});
+
+
