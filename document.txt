@@ -1,5 +1,19 @@
 PHP artisan command:
 
-
+# Creating a Controller
 - php artisan make:controller ........JobController or HomeController
 - php artisan make:controller .......JobController --resource(this will create a controller with all methods needed)
+
+# List of routes:
+- php artisan route:list
+
+# Creating a component
+- php artisan make:component Header
+
+
+
+# Installing tailwind(https://tailwindcss.com/docs/installation)
+- npm i -D tailwindcss postcss autoprefixer
+- npm i
+- npx tailwindcss init -p
+- npx tailwindcss -i resources/css/app.css -o resources/css/output.css --watch
