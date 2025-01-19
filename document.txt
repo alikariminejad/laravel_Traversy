@@ -13,13 +13,22 @@ PHP artisan command:
 # working with shell
 php artisan tinker((this opens the shell))
 DB::select('SELECT version()')
+App\Models\Job::all()
+Schema::getColumnListing('job_listings')
+$job = App\Models\Job::class
+$job::all()
+$job::create(['title'=>'job one', 'description'=>'this is job one'])
+$job::find(1)
+$job::find(1)->update(['title'=>'Updated job one'])
+$job::find(1)->delete()
 
-# working with migration
+# working with migration and model
 php artisan migrate
 php artisan migrate:status
 php artisan migrate:refresh
 php artisan make:migration for example: create_job_listings_table
 php artisan migrate:rollback
+php artisan make:model Job
 
 
 # Installing tailwind(https://tailwindcss.com/docs/installation)
