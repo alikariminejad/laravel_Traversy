@@ -10,6 +10,16 @@ PHP artisan command:
 # Creating a component
 - php artisan make:component Header
 
+# working with shell
+php artisan tinker((this opens the shell))
+DB::select('SELECT version()')
+
+# working with migration
+php artisan migrate
+php artisan migrate:status
+php artisan migrate:refresh
+php artisan make:migration for example: create_job_listings_table
+php artisan migrate:rollback
 
 
 # Installing tailwind(https://tailwindcss.com/docs/installation)
