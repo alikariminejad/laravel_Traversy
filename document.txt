@@ -34,6 +34,9 @@ php artisan make:migration add_fields_to_job_listings_table --table=job_listings
 php artisan migrate:rollback
 php artisan make:model Job
 
+# working with factory
+php artisan make:factory (for example: JobFactory)
+
 
 # Installing tailwind(https://tailwindcss.com/docs/installation)
 - npm i -D tailwindcss postcss autoprefixer
