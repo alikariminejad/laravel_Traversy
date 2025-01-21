@@ -21,6 +21,9 @@ $job::create(['title'=>'job one', 'description'=>'this is job one'])
 $job::find(1)
 $job::find(1)->update(['title'=>'Updated job one'])
 $job::find(1)->delete()
+\App\Models\User::factory()->create();
+\App\Models\User::factory()->count(10)->create();  // creates 10 users
+\App\Models\User::all();
 
 # working with migration and model
 php artisan migrate
