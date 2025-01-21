@@ -34,8 +34,12 @@ php artisan make:migration add_fields_to_job_listings_table --table=job_listings
 php artisan migrate:rollback
 php artisan make:model Job
 
-# working with factory
+# Working with factory
 php artisan make:factory (for example: JobFactory)
+
+# Working with seeder
+php artisan make:seeder (for example: RandomUserSeeder)
+php artisan db:seed --class=RandomUserSeeder
 
 
 # Installing tailwind(https://tailwindcss.com/docs/installation)
