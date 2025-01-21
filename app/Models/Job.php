@@ -30,7 +30,7 @@ class Job extends Model
         'company_name',
         'company_description',
         'company_logo',
-        'company_address',
+        'company_website',
         'user_id'
     ];
 

@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('company_name');
             $table->text('company_description')->nullable();
             $table->string('company_logo')->nullable();
-            $table->string('company_address')->nullable();
+            $table->string('company_website')->nullable();
 
             // add user foreign key constraint
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -62,7 +62,8 @@ return new class extends Migration
             'company_name',
             'company_description',
             'company_logo',
-            'company_address',]);
+            'company_website',
+            ]);
         });
     }
 };
