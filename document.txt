@@ -41,6 +41,8 @@ php artisan make:factory (for example: JobFactory)
 php artisan make:seeder (for example: RandomUserSeeder)
 php artisan db:seed --class=RandomUserSeeder
 
+#working with storage
+php artisan storage:link
 
 # Working with components
 php artisan make:component job-card
