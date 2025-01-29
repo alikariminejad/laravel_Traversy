@@ -42,6 +42,9 @@ php artisan make:seeder (for example: RandomUserSeeder)
 php artisan db:seed --class=RandomUserSeeder
 
 
+# Working with components
+php artisan make:component job-card
+
 # Installing tailwind(https://tailwindcss.com/docs/installation)
 - npm i -D tailwindcss postcss autoprefixer
 - npm i
