@@ -6,7 +6,7 @@
     <h2 class="text-4xl text-center font-bold mb-4">
         Create Job Listing
     </h2>
-    <form method="POST" action="/jobs" enctype="multipart/form-data">
+    <form method="POST" action="{{route('jobs.store')}}" enctype="multipart/form-data">
         @csrf
         <h2 class="text-2xl font-bold mb-6 text-center text-gray-500">Job Info</h2>
 
@@ -22,7 +22,7 @@
         <x-inputs.text id="tags" name="tags" label="Tags (comma-separated)" placeholder="developement, coding, java, python" />
 
         <x-inputs.select id="job_type" name="job_type" label="Job Type" value="{{old('job_type')}}" :options="['Full-Time'=>'Full-Time', 'Part-Time'=>'Part-Time', 'Contract'=>'Contract', 'Temporary'=>'Temporary', 'Internship'=>'Internship', 'Volunteer'=>'Volunteer', 'On-Call'=>'On-Call']" />
-        <x-inputs.select id="remote" name="remote" label="Remote" value="{{old('job_type')}}" :options="[0=>'No', 1=>'Yes']" />
+        <x-inputs.select id="remote" name="remote" label="Remote" value="{{old('remote')}}" :options="[0=>'No', 1=>'Yes']" />
 
 
         <x-inputs.text id="address" name="address" label="Address" placeholder="123 Main St" />
