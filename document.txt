@@ -47,6 +47,9 @@ php artisan storage:link
 # Working with components
 php artisan make:component job-card
 
+# Working with middlewares
+php artisan make:middleware (for example: LogRequest)
+
 # Installing tailwind(https://tailwindcss.com/docs/installation)
 - npm i -D tailwindcss postcss autoprefixer
 - npm i
