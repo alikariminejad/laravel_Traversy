@@ -12,7 +12,7 @@ class JobController extends Controller
 {
     // @desc Show all job listing
     // @route GET /jobs
-    public function index(): View
+    public function index()
     {
         $jobs = Job::all();
         return view('jobs.index')->with('jobs', $jobs);
