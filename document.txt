@@ -50,6 +50,12 @@ php artisan make:component job-card
 # Working with middlewares
 php artisan make:middleware (for example: LogRequest)
 
+# Working with policy
+php artisan make:policy JobPolicy --model=Job
+
+# Working with provider
+php artisan make:provider AuthServiceProvider
+
 # Installing tailwind(https://tailwindcss.com/docs/installation)
 - npm i -D tailwindcss postcss autoprefixer
 - npm i
