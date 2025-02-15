@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\JobController;
@@ -30,7 +31,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::resource('jobs', JobController::class)->middleware('auth')->only(['create', 'edit', 'update', 'destroy']);
 Route::resource('jobs', JobController::class)->except(['create', 'edit', 'update', 'destroy']);
 
-
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('Dashboard')->middleware('auth');
 
 
 
