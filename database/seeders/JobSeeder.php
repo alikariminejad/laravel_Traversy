@@ -21,7 +21,7 @@ class JobSeeder extends Seeder
         $testUserId = User::where('email', 'test@test.com')->value('id');
 
         // Get all other user ids from user model
-        $userIds = User::where('email', '!=', 'test@test.com')::pluck('id')->toArray();
+        $userIds = User::where('email', '!=', 'test@test.com')->pluck('id')->toArray();
         foreach ($jobListings as $index => &$listing) {
             if($index < 2){
                 // Assign the first two listings to the test user

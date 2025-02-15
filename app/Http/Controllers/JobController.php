@@ -29,7 +29,7 @@ class JobController extends Controller
     // @route POST /jobs
     public function store(Request $request): RedirectResponse
     {
-        
+
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
@@ -52,9 +52,9 @@ class JobController extends Controller
         ]);
 
         // Hardcoded user ID
-        $validatedData['user_id'] = 1;
+        $validatedData['user_id'] = auth()->user()->id;
 
-        if($request->hasFile('company_log')){
+        if ($request->hasFile('company_logo')) {
             // Store the file and get path
             $path = $request->file('company_logo')->store('logos', 'public');
             // Add path to the validated data
@@ -103,7 +103,7 @@ class JobController extends Controller
             'company_website' => 'nullable|url'
         ]);
 
-        if($request->hasFile('company_log')){
+        if ($request->hasFile('company_log')) {
             // Delete old logo
             Storage::delete('pulic/logos' . basename($job->company_logo));
 
@@ -121,7 +121,7 @@ class JobController extends Controller
     public function destroy(Job $job): RedirectResponse
     {
         // Delete logo if there is any
-        if($job->company_logo){
+        if ($job->company_logo) {
             Storage::delete('pulic/logos/' . $job->company_logo);
         }
         $job->delete();
