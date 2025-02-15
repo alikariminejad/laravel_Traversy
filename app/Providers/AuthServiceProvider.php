@@ -10,7 +10,7 @@ class AuthServiceProvider extends ServiceProvider
 {
     protected $policies = [
         Job::class => JobPolicy::class
-    ]
+    ];
     /**
      * Register services.
      */
