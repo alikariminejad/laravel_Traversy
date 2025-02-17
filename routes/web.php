@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Middleware\LogRequest;
+use App\Http\Controllers\ProfileController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -32,6 +33,7 @@ Route::resource('jobs', JobController::class)->middleware('auth')->only(['create
 Route::resource('jobs', JobController::class)->except(['create', 'edit', 'update', 'destroy']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('Dashboard')->middleware('auth');
+Route::put('/profile', [ProfileController::class, 'index'])->name('profile.update')->middleware('auth');
 
 
 
