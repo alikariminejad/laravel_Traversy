@@ -56,6 +56,9 @@ php artisan make:policy JobPolicy --model=Job
 # Working with provider
 php artisan make:provider AuthServiceProvider
 
+# Working with vendor
+php artisan vendor:publish --tag=laravel-pagination
+
 # Installing tailwind(https://tailwindcss.com/docs/installation)
 - npm i -D tailwindcss postcss autoprefixer
 - npm i
