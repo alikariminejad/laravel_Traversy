@@ -8,7 +8,7 @@
             <x-nav-link url="/jobs" :active="request()->is('/jobs')">All Jobs</x-nav-link>
             @auth
             <x-nav-link url="/jobs/saved" :active="request()->is('/jobs/saved')">Saved Jobs</x-nav-link>
-            <x-logout-button /> 
+            <x-logout-button />
             <x-button-link url="/jobs/create" icon="edit">Create Job</x-button-link>
             <div class="flex items-center space-x3">
                 <a href="{{route('dashboard')}}">
@@ -34,7 +34,7 @@
         class="md:hidden bg-blue-900 text-white mt-5 pb-4 space-y-2">
         <x-nav-link url="/jobs" :active="request()->is('/jobs')" :mobile="true">All Jobs</x-nav-link>
         @auth
-        <x-nav-link url="/jobs/saved" :active="request()->is('/jobs')" :mobile="true">Saved Jobs</x-nav-link>
+        <x-nav-link url="/bookmarks" :active="request()->is('bookmarks')" :mobile="true">Saved Jobs</x-nav-link>
         <x-nav-link url="/dashboard" :active="request()->is('/jobs')" :mobile="true">Dashboard</x-nav-link>
         <x-logout-button />
         <div class="pt-2"></div>
