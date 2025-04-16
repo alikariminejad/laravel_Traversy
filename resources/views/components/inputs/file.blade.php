@@ -1,4 +1,4 @@
-@props(['id', 'name', 'label'=>null])
+@props(['id', 'name', 'label'=>null, 'required'=>false])
 
 
 <div class="mb-4">
@@ -6,6 +6,7 @@
     <label class="block text-gray-700" for="{{$id}}">{{$label}}</label>
     @endif
     <input
+        {{$required ? 'required' : ''}}
         id="{{$id}}"
         type="file"
         name="{{$name}}"
