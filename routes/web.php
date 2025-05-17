@@ -11,6 +11,7 @@ use App\Http\Middleware\LogRequest;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\ApplicantController;
+use App\Http\Controllers\GeocodeController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -46,7 +47,7 @@ Route::middleware('auth')->group(function () {
 Route::post('/jobs/{job}/', [ApplicantController::class, 'store'])->name('applicant.store')->middleware('auth');
 Route::delete('/applicants/{applicant}', [ApplicantController::class, 'destroy'])->name('applicant.destroy')->middleware('auth');
 
-
+Route::get('/geocode', [GeocodeController::class, 'geocode']);
 
 
 // Route::match(['get', 'post'],'/submit', function(){
