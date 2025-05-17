@@ -9,6 +9,14 @@
 <body>
     <p>There has been a new job application to your listing</p>
 
+    <p><strong>Job Title: </strong> {{$job->title}}</p>
+    <p><strong>Application Details: </strong></p>
+
+    <p><strong>Full Name: </strong>{{$application->full_name}}</p>
+    <p><strong>Contact Phone: </strong>{{$application->contact_phone}}</p>
+    <p><strong>Contact Email: </strong>{{$application->contact_email}}</p>
+    <p><strong>Message: </strong>{{$application->message}}</p>
+    <p><strong>Location: </strong>{{$application->location}}</p>
     <p>Login to your account to view to the application</p>
 </body>
 </html>
